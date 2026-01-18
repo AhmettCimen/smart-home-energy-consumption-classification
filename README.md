@@ -8,14 +8,14 @@ Bu proje amaç akıllı ev verilerini , hava durumunu ve bazı diğer ortam veri
 
 Projede Smart Home Dataset.csv veri seti kullandım. 
 İlk adımda veri setindeki eksik değere sahip sutünları temizledim (Fazlasıyla veri olduğu için silmek sorun olmayacaktır).                     
-![1](Results/1.png)                 
+![1](Results/1.png)                              
 Zaman bilgisi saniye cinsinden olduğu için okunabilir tarih formatına çevirip daha sonra saate çevirdim.                            
-![2](Results/2.png)                
+![2](Results/2.png)                             
 
 Bu işlem sayesinde model, günün hangi saatinde enerji tüketiminin arttığını veya azaldığını öğrenebilir hale gelmiştir.
 
 Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunları da sayısal formata dönüştürdüm.
-![3](Results/3.png)
+![3](Results/3.png)                          
 
 
 #burada biraz pivotlardan ve nasıl yapıldığından bahsedicem
@@ -26,13 +26,13 @@ Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunları da sayı
 Enerji tüketiminin farklı koşullara göre nasıl değiştiğini görmek için grafikler oluşturdum.
 
 ### Saate Göre Enerji Tüketimi
-![saate enerjş](Results/Change_by_Hour.png) 
+![saate enerjş](Results/Change_by_Hour.png)              
 
 ### Neme Göre Enerji Tüketimi
-![nem enerji](Results/Change_by_Humidity.png)
+![nem enerji](Results/Change_by_Humidity.png)             
 
 ### Sıcaklığa Göre Enerji Tüketimi
-![sıcaklık eneri](Results/Change_by_Temperature.png)
+![sıcaklık eneri](Results/Change_by_Temperature.png)             
 
 
 # Hedef Değişken ve Ölçeklendirme
@@ -56,7 +56,7 @@ Veriyi %80 eğitim, %20 test olacak şekilde ayırdım.
 - Random Forest  
 
 ### Logistic Regression Sonuçları
-![Logistic Regression Results](Results/Logistic_Results.png)
+![Logistic Regression Results](Results/Logistic_Results.png)                          
 Logistic Regression diğer modellere göre daha uzun sürmesine rağmen en başarısız model oldu.
 
 ### KNN Sonuçları
