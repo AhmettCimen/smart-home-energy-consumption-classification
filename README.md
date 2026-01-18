@@ -105,4 +105,7 @@ Enerji tüketimini tahmin ederken hangi özelliklerin daha etkili olduğunu anal
 - Saat ve hava durumu bilgileri enerji tüketimini ciddi şekilde etkilediği görüldü.(Özellik Önem tablosunda)
 - Pivot tabloları, sade verisetindeki karmaşıklıktan kurtarıp veriyi gruplandırmada çok işlevsel bi araç oldu.
 
+# Katılım Sertifikalarım
+| ![s1](Results/s1.jpg) | ![s2](Results/s2.jpg) |
+|:-------------:|:-------------:|
 
