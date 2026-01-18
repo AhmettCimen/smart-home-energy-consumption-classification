@@ -42,7 +42,7 @@ gibi sorulara cevap verebilmesi için kullandım.
 
 Pivot hale getirilmiş sıcaklık değeri
 
-![4](4.png)
+![4](Results/4.png)
 
 # Veri Analizi Grafikleri
 
