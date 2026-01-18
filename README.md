@@ -83,10 +83,12 @@ Veriyi %80 eğitim, %20 test olacak şekilde ayırdım.
 Logistic Regression diğer modellere göre daha uzun sürmesine rağmen en başarısız model oldu.
 
 ### KNN Sonuçları
-![KNN Results](Results/KNN_Results.png)
+![KNN Results](Results/KNN_Results.png)                        
+%81 accuracy skoru ile Logistic Regressiondan başarılı Random Forest'tan başarısız oldu
 
-### Random Forest Sonuçları
-![Random Forest Results](Results/RandomForest_Results.png)
+### Random Forest Sonuçları                        
+![Random Forest Results](Results/RandomForest_Results.png)                        
+%83 accuracy skoru ile En başarılı sonucu veren model Random Forest oldu.
 
 
 # Feature'ların Önem Sırası
@@ -98,7 +100,7 @@ Enerji tüketimini tahmin ederken hangi özelliklerin daha etkili olduğunu anal
 
 ## Genel Değerlendirme
 
-- Random Forest modeli %85'in üzerinde sonuç alarak en başarılı sonucu verdi.
+- Random Forest modeli %83'ün üzerinde sonuç alarak en başarılı sonucu verdi.
 - Baseline oluşturarak elde edilen referans noktaları, tüketimi (düşük, yüksek)sınıflandırmada yardımcı oldu
 - Saat ve hava durumu bilgileri enerji tüketimini ciddi şekilde etkilediği görüldü.(Özellik Önem tablosunda)
 - Pivot tabloları, sade verisetindeki karmaşıklıktan kurtarıp veriyi gruplandırmada çok işlevsel bi araç oldu.
