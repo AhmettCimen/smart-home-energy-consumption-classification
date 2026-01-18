@@ -8,13 +8,14 @@ Bu proje amaç akıllı ev verilerini , hava durumunu ve bazı diğer ortam veri
 
 Projede Smart Home Dataset.csv veri seti kullanılmıştır. 
 İlk adımda veri setindeki eksik değerler temizlenmiştir.                     
-![1](1.png)                 
+![1](Results/1.png)                 
 Zaman bilgisi saniye cinsinden (Unix timestamp) olduğu için okunabilir tarih formatına çevrildi ve bu tarihten saat bilgisi (hour) ayrı bir özellik olarak çıkarılmıştır.                            
-![2](2.png)                
+![2](Results/2.png)                
 
 Bu işlem sayesinde model, günün hangi saatinde enerji tüketiminin arttığını veya azaldığını öğrenebilir hale gelmiştir.
 
 Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunlar da sayısal formata dönüştürüldü.
+![3](Results/3.png)
 
 
 #burada biraz pivotlardan ve nasıl yapıldığından bahsedicem
