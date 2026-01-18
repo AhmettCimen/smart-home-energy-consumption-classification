@@ -6,15 +6,15 @@ Bu proje amaç akıllı ev verilerini , hava durumunu ve bazı diğer ortam veri
 
 # Veri Seti ve Ön Hazırlık
 
-Projede Smart Home Dataset.csv veri seti kullanılmıştır. 
-İlk adımda veri setindeki eksik değerler temizlenmiştir.                     
+Projede Smart Home Dataset.csv veri seti kullandım. 
+İlk adımda veri setindeki eksik değere sahip sutünları temizledim (Fazlasıyla veri olduğu için silmek sorun olmayacaktır).                     
 ![1](Results/1.png)                 
-Zaman bilgisi saniye cinsinden (Unix timestamp) olduğu için okunabilir tarih formatına çevrildi ve bu tarihten saat bilgisi (hour) ayrı bir özellik olarak çıkarılmıştır.                            
+Zaman bilgisi saniye cinsinden olduğu için okunabilir tarih formatına çevirip daha sonra saate çevirdim.                            
 ![2](Results/2.png)                
 
 Bu işlem sayesinde model, günün hangi saatinde enerji tüketiminin arttığını veya azaldığını öğrenebilir hale gelmiştir.
 
-Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunlar da sayısal formata dönüştürüldü.
+Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunları da sayısal formata dönüştürdüm.
 ![3](Results/3.png)
 
 
@@ -23,7 +23,7 @@ Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunlar da sayısa
 
 # Veri Analizi Grafikleri
 
-Enerji tüketiminin farklı koşullara göre nasıl değiştiğini görmek için çeşitli grafikler oluşturulmuştur.
+Enerji tüketiminin farklı koşullara göre nasıl değiştiğini görmek için grafikler oluşturdum.
 
 ### Saate Göre Enerji Tüketimi
 ![saate enerjş](Results/Change_by_Hour.png) 
@@ -37,7 +37,7 @@ Enerji tüketiminin farklı koşullara göre nasıl değiştiğini görmek için
 
 # Hedef Değişken ve Ölçeklendirme
 
-Tahmin edilmek istenen değer enerji tüketimidir. Bu problem sınıflandırmaya çevrilmiştir:
+Tahmin edilmek istenen değer enerji tüketimidir. Bu problemi sınıflandırmaya(classification) çevirdim :
 
 - Tüketim ortalamanın üzerindeyse: 1  
 - Tüketim ortalamanın altındaysa: 0  
@@ -68,16 +68,16 @@ Logistic Regression diğer modellere göre daha uzun sürmesine rağmen en başa
 
 # Feature'ların Önem Sırası
 
-Enerji tüketimini tahmin ederken hangi özelliklerin daha etkili olduğu analiz edilmiştir. Özellikle pivot tablolar ile eklenen ortalama tüketim özelliklerinin (hourAvg, temperatureAvg vb.) model üzerinde önemli bir etkisi olduğu görülmüştür.
+Enerji tüketimini tahmin ederken hangi özelliklerin daha etkili olduğunu analiz ettim. Özellikle pivot tablolar ile eklenen ortalama tüketim özelliklerinin (hourAvg, temperatureAvg vb.) model üzerinde önemli bir etkisi olduğu görülebilir.
 
 ![özellik önem](Results/ImportanceG.png)
 
 
 ## Genel Değerlendirme
 
-- Random Forest modeli %85'in üzerinde sonuç alarak en başarılı sonucu vermiştir
+- Random Forest modeli %85'in üzerinde sonuç alarak en başarılı sonucu verdi.
 - Baseline oluşturarak elde edilen referans noktaları, tüketimi (düşük, yüksek)sınıflandırmada yardımcı oldu
-- Saat ve hava durumu bilgileri enerji tüketimini ciddi şekilde etkilemektedir
+- Saat ve hava durumu bilgileri enerji tüketimini ciddi şekilde etkilediği görüldü.(Özellik Önem tablosunda)
 - Pivot tabloları, sade verisetindeki karmaşıklıktan kurtarıp veriyi gruplandırmada çok işlevsel bi araç oldu.
 
 
