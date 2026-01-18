@@ -17,9 +17,32 @@ Bu işlem sayesinde model, günün hangi saatinde enerji tüketiminin arttığı
 Hava durumu ile ilgili sıcaklık, nem, rüzgar hızı gibi sütunları da sayısal formata dönüştürdüm.
 ![3](Results/3.png)                          
 
+# Pivot Nedir ve Neden Kullanılır
+Pivotun ne olduğunu ve neden kullanıldığını anlamak için basit bir örnek verebilirim.   
+Basit bir satış listesi düşünün bu listede şu tarz veriler olsun.
+- Ali / Elma aldı / 15 TL
+- Mehmet / Armut aldı / 8 TL
+- Ayşe / Elma aldı / 15 TL
+- Semih / Muz aldı / 17 TL
+- Ali / Elma Aldı / 15 TL
+- ...
 
-#burada biraz pivotlardan ve nasıl yapıldığından bahsedicem
 
+            
+Bu tarz bir Listeye bakarak bu satış listesinde KAÇ ELMA SATILDI sorusunun cevabını bulmak çok zor olur.
+Bu sorunu çözmek için pivot kullanılır. Bu listenin elma ürününe göre pivotlanmış hali yüzlerce satır arasında şunu gösterir.
+
+- Ürün    |   Toplam Satış
+- Elma    |   45 TL
+
+Ben kodumda pivotu binlerce satır verinin arasından (Örneğin sıcaklık için) 
+- Hava "X" dereceyken bu ev ortalama ne kadar enerji harcıyor
+- Rüzgar Hızı "X" iken evde ortalama ne kadar enerji harcanıyor 
+gibi sorulara cevap verebilmesi için kullandım.
+
+Pivot hale getirilmiş sıcaklık değeri
+
+![4](4.png)
 
 # Veri Analizi Grafikleri
 
