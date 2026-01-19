@@ -31,7 +31,7 @@ df['summary_encoded'] = le.fit_transform(df['summary'].astype(str))
 
 
 
-pivot_hour = df.pivot_table(index='hour', values='use [kW]')
+pivot_hour = df.pivot_table(index='hour', values='use [kW]') # burada pivotları olşturuyorum saate ,sıcaklık, nem ve rüzgara için pivot oluşturdum
 pivot_hour.columns = ['hourAvg']
 
 pivot_temp = df.pivot_table(index='temperature', values='use [kW]')
@@ -60,7 +60,7 @@ features = [
 
 X = df[features]
 X = X.fillna(0) # merge sonrası NaN oluştu onları 0la doldrdum
-scaler = StandardScaler()
+scaler = StandardScaler() # scaler kullanmasm da sonuç benzer çıkıyor. ama scaler yokken modellerin fitlenmesi uzuyor 
 X = scaler.fit_transform(X)
 
 
@@ -73,14 +73,14 @@ models = {
 }
 
 
-for isim, model in models.items():
+for isim, model in models.items(): # yukarıda oluşturduğum modelleri sırsasıyla fitleyip acc2 skorunu printliyor
     print(f"\n{isim} eğitiliyor...")
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     acc2=accuracy_score(y_test,y_pred)
-    print(f"acc2: {acc2} \n Sonuç: %{accuracy*100:.2f}")
-    print(classification_report(y_test,y_pred))
+    print(f"acc2: {acc2} \n Sonuç: %{accuracy*100:.2f}") # çok uzun basamaklar yazmasın diye .2f
+    print(classification_report(y_test,y_pred)) # 
     
     
 
@@ -97,7 +97,7 @@ fi_df = fi_df.sort_values(by='Importance', ascending=False)
 
 plt.figure(figsize=(12, 8)) 
 sns.barplot(x='Importance', y='Feature', data=fi_df, palette='viridis', hue='Feature', legend=False)
-
+ # normalde bu kadar palet rengi parametrelerine vb gerek yok.ama önem grafiklerinde yaygın olarak renklendirme kullanıldığnı gördüm.
 
 plt.title('Feature Importance Scores(Özelliklerin Önem Sırası)')
 plt.xlabel('Importance Score(Önem Skoru)')
@@ -108,4 +108,5 @@ plt.savefig("ImportanceG.png", dpi=300, bbox_inches='tight')
 
 
 plt.show()
+
 
