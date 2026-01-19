@@ -40,7 +40,9 @@ Ben kodumda pivotu binlerce satır verinin arasından (Örneğin sıcaklık içi
 - Rüzgar Hızı "X" iken evde ortalama ne kadar enerji harcanıyor 
 gibi sorulara cevap verebilmesi için kullandım.
 
-Pivot hale getirilmiş sıcaklık değeri
+Pivotlama işlemini Enerji tüketimine etkilerini görebilmek için  Saat , Sıcaklık, Nem ve Rüzgar Hızı değerleri için yaptım.
+
+Örnek olarak pivot hale getirilmiş sıcaklık değeri
 
 ![4](Results/4.png)
 
